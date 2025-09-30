@@ -1,4 +1,4 @@
-import { ShieldCheck, Sparkles } from 'lucide-react';
+import { ShieldCheck, Zap } from 'lucide-react';
 
 const Header = () => {
   return (
@@ -32,34 +32,42 @@ const Header = () => {
               fontWeight: 'normal', 
               color: '#64748b' 
             }}>
-              Sustainable Asset Intelligence
+              Sustainable Asset Intelligence Framework
             </span>
           </h1>
         </div>
       </div>
       
-      <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '16px' }}>
+      <div style={{ marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '6px',
+          padding: '6px 12px',
+          background: 'linear-gradient(135deg, #eff6ff, #dbeafe)',
+          border: '1px solid #93c5fd',
+          borderRadius: '999px'
+        }}>
+          <span style={{ fontSize: '12px', fontWeight: '600', color: '#1e40af' }}>
+            📊 Real Data
+          </span>
+          <span style={{ fontSize: '11px', color: '#3b82f6' }}>
+            Jun 2024
+          </span>
+        </div>
         <div style={{
           display: 'flex',
           alignItems: 'center',
           gap: '8px',
           padding: '8px 16px',
-          background: 'linear-gradient(135deg, #f0fdf4, #dcfce7)',
-          border: '1px solid #bbf7d0',
+          background: 'linear-gradient(135deg, #fef3c7, #fde68a)',
+          border: '1px solid #fbbf24',
           borderRadius: '999px'
         }}>
-          <Sparkles style={{ width: '16px', height: '16px', color: '#10b981' }} />
-          <span style={{ fontSize: '14px', fontWeight: '500', color: '#059669' }}>
-            AI Powered
+          <Zap style={{ width: '14px', height: '14px', color: '#d97706' }} />
+          <span style={{ fontSize: '12px', fontWeight: '600', color: '#b45309' }}>
+            Designed by Pentastorm
           </span>
-        </div>
-        <div style={{ 
-          height: '32px', 
-          width: '1px', 
-          backgroundColor: '#e2e8f0' 
-        }}></div>
-        <div style={{ fontSize: '14px', color: '#64748b' }}>
-          <span style={{ fontWeight: '600', color: '#475569' }}>MVP</span> Demo v1.0
         </div>
       </div>
     </header>

@@ -1,0 +1,4376 @@
+{
+  "metadata": {
+    "title": "Real Melbourne Equipment Deployment - June 2024",
+    "date": "2024-06-15T10:00:00",
+    "location": "Melbourne, VIC",
+    "total_assets": 69,
+    "data_source": "Real RPM Hire historical contracts",
+    "extraction_date": "2025-10-01"
+  },
+  "summary": {
+    "total_contracts": 69,
+    "unique_equipment": 406,
+    "unique_customers": 43,
+    "transport_tasks": 271,
+    "transport_cost": 0
+  },
+  "real_data_details": {
+    "equipment_types": {
+      "70 km/hr QuadGuard CZ": 2,
+      "Absorb 60 km system": 2,
+      "Nose Cone": 2,
+      "Transition": 2,
+      "Transition Arms": 2,
+      "Pod": 2,
+      "Pin": 7,
+      "Tab": 2,
+      "12m Male end terminal Assembly": 1,
+      "12m Female end terminal Assembly": 1,
+      "12m Quicklinks": 4,
+      "6m Quick link with Bolted joints": 1,
+      "BG800 6m T Top section Assy (BG-14-02": 2,
+      "BG800 3m T-Top section assy": 1,
+      "BG800 - Anti Gawk 6m Assembly (BG-50-84)": 2,
+      "BG800 TAU 11 backstop": 1,
+      "BG800 Intermediate Anchor Bolted Jont Assy ( BG-50-07)": 1,
+      "BG800 Intermediate Anchor assy (BG-50-09)": 1,
+      "Trucks - 16hrs x $160p/hr": 2,
+      "Tolls at Cost": 7,
+      "Truck - 6hrs x $160": 1,
+      "Delivery": 80,
+      "6m JJ hook Concrete": 5,
+      "6m Gawk kit Blk clothto suit JJ Hook/DB80": 34,
+      "Collection": 67,
+      "Armorzone Barrier Hire": 19,
+      "Bung": 5,
+      "Indicator": 3,
+      "Armorzone gawk sceen (MASH)": 3,
+      "Amorzones (Non mash)": 7,
+      "Amorzones (Yellow End Treatments)": 2,
+      "Delivery x 164 Amrorzones": 1,
+      "Armorzone gawk sceen": 32,
+      "Delivery - Gawk Screens": 1,
+      "Amorzones (Mash)": 3,
+      "Relocating Armorzones (7am-12pm)": 1,
+      "Collection x 46 barriers": 1,
+      "Collection x 48": 1,
+      "Collection - Gawk Screens": 3,
+      "Collection x 8": 1,
+      "Collection x 41 WFB": 1,
+      "Collection x 25": 3,
+      "6m DB80 Concrete Barriers": 42,
+      "Amorzones Mash": 1,
+      "Crane Semi": 1,
+      "Dogman": 1,
+      "Bone": 11,
+      "Crane Truck - 6hrs x $270p/hr": 1,
+      "Spotter - 4hrs x $175p/hr": 1,
+      "Electrical Spotter - 6hrs x $175p/hr": 1,
+      "4m DB80 Concrete Barriers": 1,
+      "Quadguard transition Assy to concrete barrier": 1,
+      "Quadguard Installation": 1,
+      "RPM Hire Install Team": 1,
+      "M24 Threaded Rod - Hilti HY200 resin": 1,
+      "Ground plate kit": 1,
+      "2m DB80 Concrete Barriers": 2,
+      "Delivery x 5": 2,
+      "Collection x 5": 4,
+      "Hybrid Light Tower": 16,
+      "Delivery x 10": 2,
+      "Collection x 7": 1,
+      "Fuelx 7": 1,
+      "Collection x 2": 3,
+      "Collection x 1": 14,
+      "Fuel": 18,
+      "Amorzones": 51,
+      "Collection x 9 WFB": 2,
+      "Gawk Screens": 1,
+      "Delivery (Cancelled due to weather)": 1,
+      "Collection X 20 wfb": 1,
+      "Collection x 4 WFB": 1,
+      "Delivery (Charged on HC7841)": 1,
+      "Collection x 9": 2,
+      "Collection x12": 1,
+      "Collection x 75 Armorzones": 1,
+      "Collection x 44 Armorzones": 1,
+      "Collectionx 32 Armorzones": 1,
+      "Absorb M": 6,
+      "Delivery - 3 x Absorb M (TL-3)": 1,
+      "Collection x 23 barriers": 1,
+      "Collection x 19": 1,
+      "Collection x 30": 1,
+      "Armorzones (1 x end treatment)": 4,
+      "Collection x 17": 1,
+      "Collection x Gawk Screens": 1,
+      "Collection x 1 (Symal Compound)": 1,
+      " Amorzones (1x end treatment)": 2,
+      "Collection x 11": 2,
+      "100km/h QUADGUARD MASH": 7,
+      "4.3.1 installation of TL3 Quadguard x 1 (night shift)": 1,
+      "4.1 traffic install labour (night) @ $120/hr x 10hrs (1 labourer)": 1,
+      "4.5 Yard Management Fee (night)": 9,
+      "Absorb M TL3": 5,
+      "Angled fixing bracket for Concrete Barriers": 4,
+      "4.3 Installation of Absorb M (night) @ $250ea x 4": 1,
+      "4.1 traffic install labour (night) @ $120hr x 23hrs (2 labourers)": 1,
+      "Angled Bracket anchoring (into ground and barrier)": 4,
+      "4.3.1 installation of TL3 Quadguard x 2 (night shift)": 1,
+      "4.1 traffic install labour (night) @ $120/hr x 21hrs (2 labourers)": 1,
+      "Reflectors for DB80's": 6,
+      "Yard Management Fee (night)": 1,
+      "4.1 traffic install labour (night) @ $120/hr x 4": 1,
+      "4.3 Installation of Absorb M (night) @ $250 ea x 1": 1,
+      "4.1 traffic install labour (night) @ $120/hr x 7.5 hrs": 1,
+      "4.3 installation of Asorb M (night) @ $250 ea x 2": 1,
+      "1 x truck to transport off hired Quadguard (1)": 1,
+      "Absorb M (TL3)": 2,
+      "4.3 Installation of Absorb M (night) @ $250nea x 1": 1,
+      "4.1 traffic install labour (night) @ $120/hr x 10.5": 1,
+      "4.1 traffic install labour (night) @ $120/hr x 8hrs": 1,
+      "Transportation4.3 Installation of Absorb M (night) @ $250 each x 3": 1,
+      "Reflectors DB80's": 1,
+      ".3.1 installation of TL3 Quadguard x 1 (night shift)": 1,
+      "3.1 installation of TL3 Quadguard x 1 (night shift)": 1,
+      "3.1 Traffic install labour (day) @ $90/h - 3 month quadguard insepction ( min 4 hours labour/dayshift)": 1,
+      "Amorzones MASH": 11,
+      "Armorzone Barrier Hire MASH": 3,
+      "WFB End Treatments": 6,
+      "Delivery - Armorzones": 1,
+      "Delivery - 2 x Absorb M (TL-3)": 1,
+      "Delivery - 1 x Absorb M (TL-3)": 1,
+      "Yard Management Fee": 11,
+      "Trucks - 11.5hrs x $160p/hr": 1,
+      "Tolls @ Cost": 10,
+      "Fuel Levy 15%": 3,
+      "Installation & Demob of Damaged QG": 1,
+      "Late Cancellation Fee": 1,
+      "RPM Labour - Install Quadguard": 5,
+      "Trucks - 12hrs x $160p/hr": 2,
+      "Fuel Levy @ 15%": 15,
+      "RPM Delivery": 3,
+      "Trucks - 8hrs x $160p/hr": 2,
+      "Truck - 8.5hrs x $160p/hr": 1,
+      "RPM Labour - Wasted Trip": 1,
+      "RPM Labour - Install QuadGuard": 1,
+      "RPM Delivery of Absorb": 1,
+      "Delivery of QuadGuard": 1,
+      "RPM Labour - Install & Demob of Damaged QuadGuard": 2,
+      "RPM Labour - Install & Demob of damaged QuadGuard": 1,
+      "Demob of QuadGuard - Night Shift": 2,
+      "Collection of QuadGuard": 1,
+      "Absorb M 80km System (TL3)": 6,
+      "Install Labour $120p/hr x 11hrs": 1,
+      "Installation of Absorbs Onsite": 1,
+      "RPM Supervisor 7hrs x $120p/hr": 1,
+      "Install Labour $120p/hr x 11.5hrs": 1,
+      "Install Labour $120p/hr x 10hrs": 1,
+      "Install Tech - 8hrs x $120": 1,
+      "Delivery of Absorbs": 1,
+      "Install Labour $120p/hr x 8hrs (Night Cancelled Due To Weather)": 1,
+      "Install Labour - RPM Supervisor - 11hrs x $120p/hr": 1,
+      "1 Truck - Delivery of Absorbs - 11hrs x $160p/hr": 1,
+      "Delivery of Absorb M to site": 1,
+      "Installation of Absorb M": 1,
+      "Installation of Absorb M x 3": 1,
+      "Installation of Absorb M x 2": 1,
+      "Installation Labour x $120p/hr x 8hrs": 1,
+      "Installation Labour - $120p/hr x 8hrs": 1,
+      "Installation Labour $120p/hr x 8hrs": 1,
+      "Installation of Absorb M x 1": 1,
+      "Absorb M Collection - Labour x 8hrs x $120p/hr": 1,
+      "1 Semi - 9hrs x $160p/hr - Collection of Absorb M's": 1,
+      "Truck Tolls at Cost": 2,
+      "Armorzone": 1,
+      "Delivery x 18 - Tilt Tray": 1,
+      "Collection x 18": 1,
+      "3 x trucks @ $160/hr x 25 hrs": 1,
+      "fuel levy at cost @ 22.5%": 1,
+      "tolls at cost": 1,
+      "Armorzone gawk sceen MASH": 3,
+      "Delivery - 311 Elizabeth street Melbourne": 1,
+      "Armorzones MASH": 1,
+      "Armorzone gawk sceen x 3": 1,
+      "Amorzones x 6": 2,
+      "Armorzone gawk sceen x 10": 1,
+      "Delivery x 20 Armorzones": 1,
+      "Amorzones x 2 MASH": 1,
+      "WFB End Treatments x 2": 1,
+      "Armorzone gawk sceen x 40": 2,
+      "Delivery x 4 Armorzones + 40 x Gawk Screens": 1,
+      "Collection Armorzones & Gawk Screens off hired from the 24/11 (Multiple trips)": 1,
+      "Collection x 86": 1,
+      "Armorzone gawk sceen x 25 + installation": 1,
+      "Delivery - 25 x WFB + GS + Installation": 1,
+      "Amorzones x 5": 1,
+      "Delivery  x 5": 1,
+      "Delivery (After hours)": 1,
+      "Portable Traffic Light": 2,
+      "Trucks - 6hrs x $160": 1,
+      "Porta Boom": 12,
+      "VMS C Size Amber": 8,
+      "Collection x 15 barriers": 1,
+      "Collection - Armorzones & VMS": 1,
+      "40 x Light Towers": 1,
+      "Light Tower 360": 4,
+      "Light Tower Directional": 26,
+      "Directional LED Lighting Tower": 10,
+      "Fuel LT92": 1,
+      "Fuel - LT172": 1,
+      "Collection x 28": 1,
+      "Fuel - LT138": 1,
+      "Fuel - LT87": 1,
+      "Fuel - LT70": 2,
+      "Collectionx x 1": 1,
+      "Fuel LT158": 1,
+      "Phil": 1,
+      "Lil": 1,
+      "Tommy": 1,
+      "Toll fee": 2,
+      "Chuckie": 1,
+      "Trucks - 1 x Truck @ $160p/hr x 9hrs": 1,
+      "Truck - 1 x Truck @ $160p/hr x 6hrs": 1,
+      "Portaboom": 4,
+      "Collection x 23": 2,
+      "Collection x 14": 2,
+      "Highway Guard 6m Section": 18,
+      "M24 Gravity Bar": 1,
+      "Arrow Board": 14,
+      "RPM Hire Labour": 5,
+      "Collection x 23 Plus labour x 2 hours": 1,
+      "Collection x 25 WFB": 1,
+      "18 x Amorzones MASH": 1,
+      "6m Gawk Screen kit for Highway Guard": 9,
+      "2 x Trucks - $160p/hr x 16hrs": 1,
+      "Trucks - Fuel Levy 15%": 2,
+      "Trucks - Tolls at cost": 1,
+      "1 Truck - 27hrs x $160p/hr (Return loads of HWG across 3 days)": 1,
+      "Truck - 11hrs x $160p/hr": 1,
+      "Truck - 6hrs x $160p/hr": 1,
+      "1 Truck - 11hrs x $160p/hr": 1,
+      "Absorb M 60KM System": 1,
+      "Absorb M Transition": 1,
+      "Absorb M Element": 1,
+      "Absorb M Element Cap": 1,
+      "Absorb M Element Plug": 1,
+      "Absorb M Element Tension Strap": 1,
+      "Absorb M Midnose": 1,
+      "Absorb M Nose plate": 1,
+      "Absorb M Transition Strap LH": 1,
+      "Absorb M Transition Strap RH": 1,
+      "Absorb M Pin Assembly": 1,
+      "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge": 24,
+      "Collection x 142": 1,
+      "Collection - Tilt Tray requested and no forklift was onsite": 1,
+      "Reflectors": 4,
+      "M24 Gravity Bar including HY200 resin": 3,
+      "Trucks 24.5hrs x $160p/hr": 1,
+      "Trucks 26.5hrs x $160p/hr": 1,
+      "Trucks 16hrs x $160p/hr": 1,
+      "1 x Truck - 6hrs x $160p/hr": 1,
+      "Truck 6hrs x $160p/hr": 2,
+      "Fuel Levy @15%": 1,
+      "1 Truck 9hrs x $160p/hr": 1,
+      "Trucks - 9hrs x $160p/hr": 1,
+      "April - Truck Fuel Levy 15%": 1,
+      "Truck - 10hrs x $160p/hr": 1,
+      "Truck -9hrs x $160p/hr": 1,
+      "Fuel levy @15%": 1,
+      "Highway Guard 6m Section - Min 1 Month hire": 1,
+      "Highway Guard 10 Degree Angled T Connector - Min 1 Month hire": 1,
+      "Trucks 6hrs x $160p/hr": 1,
+      "Collection x 1 LT": 1,
+      "Fuel - LT191": 1,
+      "Collection x 3": 1,
+      "Installation Franna/Operator/Dogman Night shift - (Min 6 Hours)": 1,
+      "Franna Operater/Dogman Layday - Install": 1,
+      "Installation Supervisor (Min 8 hours)": 1,
+      "Supervisor Layday  - Install": 1,
+      "Installation x2 Technician ( Min 8 hours each )": 1,
+      "Technician x2 Layday - Install": 1,
+      "Demobilisation x1 Technician (Min 8 hours )": 1,
+      "Technician x1 Layday - Demob": 1,
+      "Demobilisation Supervisor  (Min 8 hours)": 1,
+      "Supervisor Layday - Demob": 1,
+      "Highway Guard 6m Section @ $0.90c per metre per day. - Price contingent upon PO received for HC14347": 1,
+      "6m Gawk Screen kit for Highway Guard @ $0.20c per metre per day.": 1,
+      "Trucks - 24hrs x $209p/hr": 1,
+      "Franna - Fuel Levy 15%": 3,
+      "25T Franna + Dogman - 9hrs x $570p/hr": 1,
+      "Franna Operator + Dogman Laydays": 1,
+      "3 Trucks - 27hrs x $209p/hr": 1,
+      "Trucks Tolls at Cost": 2,
+      "Highway Guard 6m Section @ $0.90c per meter per day.": 1,
+      "6m Gawk Screen kit for Highway Guard @ $0.20c per meter per day": 1,
+      "Absorb M TL3 80 km/h @ $35 per day.": 1,
+      "Absorb M Anchor Bolts": 3,
+      "TL2/TL3 Absorb M Installation": 2,
+      "Demobilisation Franna/Operator/Dogman Night shift - (Min 6 Hours)": 1,
+      "Franna Operater/Dogman Layday - Demob": 1,
+      "Demobilisation x2 Technician ( Min 8 hours )": 1,
+      "Technician x2 Layday - Demob": 1,
+      "TL2/TL3 Absorb M Demobilisation": 1,
+      "23/04/24 - RAIN CANCELLATION - Trucks - 68hrs x $209p/hr": 1,
+      "23/04/24 - RAIN CANCELLATION - Trucks - Fuel Levy 15%": 1,
+      "23/04/24 - RAIN CANCELLATION - Trucks - Tolls at Cost": 1,
+      "23/04/24 - RAIN CANCELLATION - Franna + Dogmen - 8hrs x $570p/hr": 1,
+      "23/04/24 - RAIN CANCELLATION - Franna + Dogmen - Layday": 1,
+      "23/04/24 - RAIN CANCELLATION - Supervisor - 8hrs x $222.50p/hr": 1,
+      "23/04/24 - RAIN CANCELLATION - 3 x Install Technicians - 24hrs x $187.50p/hr": 1,
+      "23/04/24 - RAIN CANCELLATION - Supervisor - Layday": 1,
+      "23/04/24 - RAIN CANCELLATION - 3 x Install Technicians - Layday": 1,
+      "23/04/24 - RAIN CANCELLATION - Franna - Fuel Levy 15%": 1,
+      "23/04/24 - RAIN CANCELLATION - Yard Management Fee": 1,
+      "Trucks - 67hrs x $209p/hr": 1,
+      "Trucks - Tolls at Cost": 1,
+      "Franna + Dogmen - 8hrs x $570p/hr": 1,
+      "Franna + Dogmen - Layday": 1,
+      "Supervisor - 8hrs x $222.50p/hr": 2,
+      "4 x Install Technicians - 32hrs x $187.50p/hr": 2,
+      "Supervisor - Layday": 1,
+      "4 x Install Technicians - Layday": 1,
+      "4 Trucks - 32hrs x $209p/hr": 1,
+      "Tolls at Cost for Trucks": 1,
+      "Armorzone Water Filled Barrier MASH": 22,
+      "Collection x 45": 1,
+      "Collection - GS x 73": 1,
+      "Collection x 17 WFB": 1,
+      "Highway Guard 6m Section @ $0.60c per metre per day.": 2,
+      "6m Gawk kit Blk clothto suit JJ Hook/DB80 @ 0.15c per metre per day.": 2,
+      "5 DEGREE T CONNECTOR @ $3 ea per day.": 2,
+      "Transport - Flat top semi (Dayshift) - x4 Trucks at Minimum 6 Hours Each.": 1,
+      "5 DEGREE T CONNECTOR": 5,
+      "RPM Collection": 1,
+      "Highway Guard 10 Degree Angled T Connector": 1,
+      "Fuel Levy @ a5%": 1,
+      "Delivery by RPM of T Connectors": 1,
+      "Delivery of T Connectors at late notice": 1,
+      "Delivery x 2 (After hours)": 1,
+      "Eco-LED Lighting Tower": 1,
+      "1 x Absorb 80km M End treatment TL3  for 12 months $30.00 per day for 12 Months hire - Client to fill with water": 1,
+      "Absorb M Anchor Bolts @ $29.95 per unit": 1,
+      "6m DB80 Concrete Barriers @ $0.26c Per Metre Per Day": 2,
+      "6m Gawk kit Blk clothto suit JJ Hook/DB80 @ $0.12c Per Metre Per Day": 1,
+      "Installation Supervisor x 1 (Min 8 hours)": 1,
+      "Demobilisation Supervisor x 1 (Min 8 hours)": 1,
+      "Absorb M @ $27.5 ea per day.": 1,
+      "Trucks - 21hrs x $187.50p/hr": 1,
+      "Franna + Dogman - 1 x $570.00": 1,
+      "Franna + Dogmen - 8hrs x $405p/hr": 1,
+      "2 Semis - 24hrs x $187.5p/hr": 1,
+      "1 x Supervisor (Barrier Side Shift) Min 8 hrs x $222.5p/hr": 1,
+      "Absorb M TL3 80 KM/H System at $45 ea per day.": 1,
+      "VMS A Size Colour": 2,
+      "VMS A Size Amber": 7,
+      "6m JJ hook Concrete @ $0.30c per metre per day.": 2,
+      "Transport Delivery - Flat top semi (Dayshift) - x5 Trucks at 7 Hours Each": 1,
+      "6m Gawk kit Blk clothto suit JJ Hook/DB80 @ $0.15c per metre per day.": 1,
+      "Installation Franna/Operator/Dogman (Dayshift)": 1,
+      "Installation Franna/Operator/Dogman (Dayshift) - Minimum 6 Hours - Install May 17": 1,
+      "4 Trucks - 35.5hrs x $160p/hr": 1,
+      "Trucks Fuel Levy at 15%": 1,
+      "Franna + Dogman - 8hrs x $405p/hr": 1,
+      "Franna + Dogman Overtime Charges 3.5hrs": 1,
+      "Franna Fuel Levy @ 15%": 1,
+      "Franna + Dogman Meal Allowance $60per person": 1,
+      "2m DB80 Concrete Barriers @ $0.80c per metre per day.": 1,
+      "Crane Truck 8hrs x $295p/hr": 1,
+      "Barrier Yard Opening Fee": 2,
+      "Crane Truck - 8hrs x $295p/hr": 1,
+      "MASH Armorzones": 1,
+      "Road Plate 1200 x 1200": 2,
+      "Road Plate 1200 x 2400": 1,
+      "Collection - Tilt trays": 1,
+      "VMS C Size Colour": 5,
+      "Portable Traffic Light Hire": 7,
+      "Installation Franna/Operator/Dogman (Dayshift) - Min 6 hours": 1,
+      "2 Trucks - 12hrs x $160p/hr": 1,
+      "Franna + Dogman - $405p/hr x 4hrs": 1,
+      "1 x VMS board": 2,
+      "VMSHire": 1,
+      "Delivery X3": 1,
+      "Collection X3": 1,
+      "LIGHT TOWER": 3,
+      "1 x VMS @ $45 per day": 2,
+      "Collection x 65": 1,
+      "Porta boom": 1,
+      "PORTABOOM TRAILER": 1,
+      "Charging Lead": 1,
+      "PB Key": 1,
+      "Remote": 1,
+      "Carry Bag": 1,
+      "Boom Arm c/w Clamp": 1,
+      "Stop Sign": 1,
+      "Lifting Sling": 1,
+      "D Shackle": 1,
+      "Solar Panel": 1,
+      "Trucks - 7hrs x $160p/hr": 1,
+      "Franna + Dogman - 6hrs x $378p/hr": 1,
+      "Franna + Dogman - 7.5hrs x $378p/hr": 1,
+      "3 Trucks - 26hrs x $160p/hr": 1,
+      "Franna Tolls at Cost": 1,
+      "Portable traffic Light Pedestrian": 6,
+      "Collection x 2 SETS": 1,
+      "Collection x 1 set": 1,
+      "B Size Amber VMS": 1,
+      "Collection - A/H x 1": 1,
+      "Collection x 2 WFB": 1,
+      "Collection x 26": 1,
+      "Delivery X1": 2,
+      "Collection X1": 2,
+      "44 x Mash Rated Armorzones": 4,
+      "44 x Gawk Screen": 3,
+      "Collection x 20": 2,
+      "3 x Directional Lighting Towers": 1,
+      "Collection x 70 WFB": 1
+    },
+    "customers": {
+      "C0107": 11,
+      "C0108": 8,
+      "C0109": 13,
+      "null": 1,
+      "C1278": 1,
+      "C0699": 2,
+      "C0678": 8,
+      "C1713": 1,
+      "C1058": 6,
+      "C1193": 2,
+      "C0355": 1,
+      "C0071": 3,
+      "S0360": 2,
+      "C0577": 2,
+      "C1351": 1,
+      "C1376": 2,
+      "C1436": 2,
+      "C0090": 3,
+      "C0247": 1,
+      "C0522": 1,
+      "C0260": 1,
+      "C0051": 1,
+      "C1419": 1,
+      "C0052": 2,
+      "C1441": 1,
+      "S0018": 1,
+      "C1341": 1,
+      "C0097": 1,
+      "CENTENNIAL": 1,
+      "C1308": 9,
+      "C0637": 1,
+      "C1473": 1,
+      "C1407": 2,
+      "C0368": 1,
+      "C1290": 1,
+      "S0082": 1,
+      "C0003": 1,
+      "C1131": 2,
+      "C0137": 1,
+      "C1149": 1,
+      "C1133": 2,
+      "C0968": 1,
+      "C0936": 1
+    },
+    "statuses": {
+      "Closed": 102,
+      "Off-Hired (Pending Final Invoice)": 4
+    }
+  },
+  "assets": [
+    {
+      "id": "HC5670",
+      "type": "equipment",
+      "customer": "C0108",
+      "status": "closed",
+      "location": {
+        "lat": -37.8225734,
+        "lng": 144.9340911,
+        "address": "Turner St",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Absorb 60 km system",
+          "quantity": 2.0,
+          "rate": 0
+        },
+        {
+          "description": "Nose Cone",
+          "quantity": 2.0,
+          "rate": 0
+        },
+        {
+          "description": "Transition",
+          "quantity": 2.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-07-05T14:00:00Z",
+        "end": "2025-06-03T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC BARRIERS",
+        "address": "Depot, 12 Terror St"
+      }
+    },
+    {
+      "id": "HC6530",
+      "type": "barrier",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8334158760732,
+        "lng": 144.971730251526,
+        "address": "St Kilda Occupation",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Barrier Hire",
+          "quantity": 42.0,
+          "rate": 0
+        },
+        {
+          "description": "Pin",
+          "quantity": 110.0,
+          "rate": 0
+        },
+        {
+          "description": "Bung",
+          "quantity": 110.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery x 164 Amrorzones",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery - Gawk Screens",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 46 barriers",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 48",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - Gawk Screens",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 8",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 41 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 25",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-11-26T13:00:00Z",
+        "end": "2024-10-03T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC6663",
+      "type": "barrier",
+      "customer": null,
+      "status": "closed",
+      "location": {
+        "lat": -37.8036807235047,
+        "lng": 144.945272323049,
+        "address": "89-101 lothian st,",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "6m DB80 Concrete Barriers",
+          "quantity": 3.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones Mash",
+          "quantity": 35.0,
+          "rate": 0
+        },
+        {
+          "description": "Crane Semi",
+          "quantity": 10.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-10-17T13:00:00Z",
+        "end": "2024-06-26T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC BARRIERS",
+        "address": "Depot, 12 Terror St"
+      }
+    },
+    {
+      "id": "HC6907",
+      "type": "lighting",
+      "customer": "C0107",
+      "status": "closed",
+      "location": {
+        "lat": -37.8239337373982,
+        "lng": 144.930581016313,
+        "address": "542 Foostcray Rd ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Hybrid Light Tower",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Hybrid Light Tower",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Hybrid Light Tower",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery x 5",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 5",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery x 10",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 7",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 2",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 2",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-10-18T13:00:00Z",
+        "end": "2024-08-05T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC7198",
+      "type": "equipment",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8001340420794,
+        "lng": 144.959823063238,
+        "address": "103 Barry Street",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 10.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 9.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 9 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-11-10T13:00:00Z",
+        "end": "2024-08-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC7275",
+      "type": "barrier",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.7999244,
+        "lng": 144.9600386,
+        "address": "103 Barry St",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Barrier Hire",
+          "quantity": 20.0,
+          "rate": 0
+        },
+        {
+          "description": "Gawk Screens",
+          "quantity": 20.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-11-17T13:00:00Z",
+        "end": "2025-02-27T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC7419",
+      "type": "equipment",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.7999244,
+        "lng": 144.9600386,
+        "address": "103 Barry St",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 2.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 20.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone Barrier Hire",
+          "quantity": 18.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-11-27T13:00:00Z",
+        "end": "2025-02-27T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC7641",
+      "type": "equipment",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8001340420794,
+        "lng": 144.959823063238,
+        "address": "103 Barry Street",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 7.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 20.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 9.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery (Cancelled due to weather)",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection X 20 wfb",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 4 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2022-12-13T13:00:00Z",
+        "end": "2025-02-27T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC7842",
+      "type": "equipment",
+      "customer": "C0699",
+      "status": "closed",
+      "location": {
+        "lat": -37.76878192371,
+        "lng": 144.825562102029,
+        "address": "42 Gilmour Rd, Sunshine North VIC 3020",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 9.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 26.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 10.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery (Charged on HC7841)",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 9",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-01-12T13:00:00Z",
+        "end": "2024-08-19T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC8013",
+      "type": "equipment",
+      "customer": "C0678",
+      "status": "closed",
+      "location": {
+        "lat": -37.7978923942882,
+        "lng": 145.118147005624,
+        "address": "32 standard Ave ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 21.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone Barrier Hire",
+          "quantity": 58.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 33.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x12",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - Gawk Screens",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 75 Armorzones",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 44 Armorzones",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collectionx 32 Armorzones",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery - 3 x Absorb M (TL-3)",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 23 barriers",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 19",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 30",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 9",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-02-13T13:00:00Z",
+        "end": "2024-12-30T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC8074",
+      "type": "safety",
+      "customer": "C0109",
+      "status": "off-hired_(pending_final_invoice)",
+      "location": {
+        "lat": -37.8334158760732,
+        "lng": 144.971730251526,
+        "address": "St Kilda Occupation",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzones (1 x end treatment)",
+          "quantity": 2.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 6.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzones (1 x end treatment)",
+          "quantity": 17.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 17",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x Gawk Screens",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1 (Symal Compound)",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-01-29T13:00:00Z",
+        "end": "2025-09-07T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC8081",
+      "type": "equipment",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8334158760732,
+        "lng": 144.971730251526,
+        "address": "St Kilda Occupation",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": " Amorzones (1x end treatment)",
+          "quantity": 15.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 26.0,
+          "rate": 0
+        },
+        {
+          "description": " Amorzones (1x end treatment)",
+          "quantity": 11.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 11",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - Gawk Screens",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-01-29T13:00:00Z",
+        "end": "2024-06-24T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC8448",
+      "type": "safety",
+      "customer": "C0699",
+      "status": "off-hired_(pending_final_invoice)",
+      "location": {
+        "lat": -37.769339929991,
+        "lng": 144.826734653918,
+        "address": "38 Barwon Ave, Sunshine North VIC.",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone",
+          "quantity": 18.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 18.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 18.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery x 18 - Tilt Tray",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 18",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-02-16T13:00:00Z",
+        "end": "2025-02-27T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC8484",
+      "type": "equipment",
+      "customer": "C0107",
+      "status": "closed",
+      "location": {
+        "lat": -37.8239337373982,
+        "lng": 144.930581016313,
+        "address": "542 Foostcray Rd ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "6m JJ hook Concrete",
+          "quantity": 15.0,
+          "rate": 0
+        },
+        {
+          "description": "3 x trucks @ $160/hr x 25 hrs",
+          "quantity": null,
+          "rate": 0
+        },
+        {
+          "description": "fuel levy at cost @ 22.5%",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [],
+      "dates": {
+        "start": "2023-02-21T13:00:00Z",
+        "end": "2024-08-25T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC BARRIERS",
+        "address": "Depot, 12 Terror St"
+      }
+    },
+    {
+      "id": "HC8748",
+      "type": "equipment",
+      "customer": "C1058",
+      "status": "closed",
+      "location": {
+        "lat": -37.8113750138791,
+        "lng": 144.961688827811,
+        "address": "Elizabeth Street, Melbourne CBD",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones MASH",
+          "quantity": 27.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen MASH",
+          "quantity": 27.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 15.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery - 311 Elizabeth street Melbourne",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery x 10",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery x 20 Armorzones",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery x 4 Armorzones + 40 x Gawk Screens",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection Armorzones & Gawk Screens off hired from the 24/11 (Multiple trips)",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 86",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 25",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery - 25 x WFB + GS + Installation",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery  x 5",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-02-19T13:00:00Z",
+        "end": "2024-08-08T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC10349",
+      "type": "lighting",
+      "customer": "C0107",
+      "status": "closed",
+      "location": {
+        "lat": -37.8239337373982,
+        "lng": 144.930581016313,
+        "address": "542 Foostcray Rd ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Portable Traffic Light",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Portable Traffic Light",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery (After hours)",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-06-08T14:00:00Z",
+        "end": "2024-07-30T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC10711",
+      "type": "barrier",
+      "customer": "C0107",
+      "status": "closed",
+      "location": {
+        "lat": -37.8239337373982,
+        "lng": 144.930581016313,
+        "address": "542 Foostcray Rd ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "2m DB80 Concrete Barriers",
+          "quantity": 6.0,
+          "rate": 0
+        },
+        {
+          "description": "Bone",
+          "quantity": 6.0,
+          "rate": 0
+        },
+        {
+          "description": "Trucks - 6hrs x $160",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [],
+      "dates": {
+        "start": "2023-08-22T14:00:00Z",
+        "end": "2025-04-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC BARRIERS",
+        "address": "Depot, 12 Terror St"
+      }
+    },
+    {
+      "id": "HC10977",
+      "type": "equipment",
+      "customer": "C1193",
+      "status": "closed",
+      "location": {
+        "lat": -37.81809968,
+        "lng": 145.12245516,
+        "address": "Whitehorse Road",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Porta Boom",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-07-18T14:00:00Z",
+        "end": "2024-09-22T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC11316",
+      "type": "signage",
+      "customer": "C0355",
+      "status": "closed",
+      "location": {
+        "lat": -37.810657,
+        "lng": 144.9243967,
+        "address": "Footscray Rd Service Rd and Dock Link Rd",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS C Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 23.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 15.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 15 barriers",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - Armorzones & VMS",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-08-08T14:00:00Z",
+        "end": "2025-03-30T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC11572",
+      "type": "equipment",
+      "customer": "C1193",
+      "status": "closed",
+      "location": {
+        "lat": -37.8176846377866,
+        "lng": 145.12069879966,
+        "address": "Box Hill",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Porta Boom",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-08-24T14:00:00Z",
+        "end": "2025-02-27T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC11588",
+      "type": "lighting",
+      "customer": "C0107",
+      "status": "closed",
+      "location": {
+        "lat": -37.8239337373982,
+        "lng": 144.930581016313,
+        "address": "542 Foostcray Rd ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "40 x Light Towers",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 5",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 28",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collectionx x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-09-25T14:00:00Z",
+        "end": "2025-04-06T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC11589",
+      "type": "equipment",
+      "customer": "C0071",
+      "status": "closed",
+      "location": {
+        "lat": -37.9107631267237,
+        "lng": 145.147341677673,
+        "address": "64 Duerdin St",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Phil",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Lil",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Tommy",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-08-22T14:00:00Z",
+        "end": "2024-08-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC12880",
+      "type": "equipment",
+      "customer": "C0678",
+      "status": "closed",
+      "location": {
+        "lat": -37.8113398840449,
+        "lng": 145.247420709145,
+        "address": "Dublin Road ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Porta Boom",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Porta Boom",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Portaboom",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-11-28T13:00:00Z",
+        "end": "2024-06-18T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC12901",
+      "type": "equipment",
+      "customer": "C0678",
+      "status": "closed",
+      "location": {
+        "lat": -37.8159875515848,
+        "lng": 145.237065861002,
+        "address": "Great Ryrie St &Bedford Rd Ringwood",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 2.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 12.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 23.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 23",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 14",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-11-09T13:00:00Z",
+        "end": "2024-11-21T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC12903",
+      "type": "equipment",
+      "customer": "C0678",
+      "status": "closed",
+      "location": {
+        "lat": -37.8113398840449,
+        "lng": 145.247420709145,
+        "address": "Dublin Road ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 8.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 12.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 23.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-11-10T13:00:00Z",
+        "end": "2024-12-10T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC13369",
+      "type": "equipment",
+      "customer": "S0360",
+      "status": "closed",
+      "location": {
+        "lat": -38.0327805317938,
+        "lng": 145.217803409323,
+        "address": "Dandenong South",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-12-04T13:00:00Z",
+        "end": "2025-06-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC13411",
+      "type": "equipment",
+      "customer": "C1058",
+      "status": "closed",
+      "location": {
+        "lat": -37.8105313936601,
+        "lng": 144.960670843855,
+        "address": "375 Elizabeth Street Melbourne",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones MASH",
+          "quantity": 25.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen MASH",
+          "quantity": 42.0,
+          "rate": 0
+        },
+        {
+          "description": "RPM Hire Labour",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 23 Plus labour x 2 hours",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 25",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 25 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-01-10T13:00:00Z",
+        "end": "2024-08-08T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC13518",
+      "type": "equipment",
+      "customer": "C0577",
+      "status": "closed",
+      "location": {
+        "lat": -37.7027610735968,
+        "lng": 144.863701025024,
+        "address": "Macedon Way, Melbourne Airport",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "18 x Amorzones MASH",
+          "quantity": 18.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-12-13T13:00:00Z",
+        "end": "2024-06-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC13551",
+      "type": "equipment",
+      "customer": "C1058",
+      "status": "closed",
+      "location": {
+        "lat": -37.8057406,
+        "lng": 144.9599233,
+        "address": "518 Elizabeth St, Melbourne",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 21.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 21.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-01-07T13:00:00Z",
+        "end": "2024-08-08T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC13594",
+      "type": "lighting",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8078172914684,
+        "lng": 144.961857805029,
+        "address": "CRN Stuart & Franklin St, Melbourne CBD",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Light Tower Directional",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2023-12-18T13:00:00Z",
+        "end": "2025-02-19T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC13630",
+      "type": "equipment",
+      "customer": "C0577",
+      "status": "closed",
+      "location": {
+        "lat": -37.7027610735968,
+        "lng": 144.863701025024,
+        "address": "Macedon Way, Melbourne Airport",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones MASH",
+          "quantity": 6.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones MASH",
+          "quantity": 10.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones MASH",
+          "quantity": 142.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 142",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - Tilt Tray requested and no forklift was onsite",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-01-09T13:00:00Z",
+        "end": "2024-06-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14064",
+      "type": "lighting",
+      "customer": "C0107",
+      "status": "closed",
+      "location": {
+        "lat": -37.8093704609511,
+        "lng": 144.934710581155,
+        "address": "Bridge 90",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Directional LED Lighting Tower",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Light Tower Directional",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Light Tower Directional",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 2",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1 LT",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 3",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-02-14T13:00:00Z",
+        "end": "2025-02-25T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14077",
+      "type": "equipment",
+      "customer": "C1376",
+      "status": "closed",
+      "location": {
+        "lat": -37.8008118826837,
+        "lng": 144.962489924706,
+        "address": "Gratton Street",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 6.0,
+          "rate": 0
+        },
+        {
+          "description": "Pin",
+          "quantity": 6.0,
+          "rate": 0
+        },
+        {
+          "description": "Bung",
+          "quantity": 6.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-01-30T13:00:00Z",
+        "end": "2024-10-13T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14392",
+      "type": "barrier",
+      "customer": "C0108",
+      "status": "closed",
+      "location": {
+        "lat": -37.8225734,
+        "lng": 144.9340911,
+        "address": "Turner St",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 20.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-02-14T13:00:00Z",
+        "end": "2025-04-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14509",
+      "type": "lighting",
+      "customer": "C0107",
+      "status": "closed",
+      "location": {
+        "lat": -37.8093704609511,
+        "lng": 144.934710581155,
+        "address": "Bridge 90",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Light Tower Directional",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Light Tower Directional",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-02-21T13:00:00Z",
+        "end": "2025-02-25T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14639",
+      "type": "equipment",
+      "customer": "C0678",
+      "status": "closed",
+      "location": {
+        "lat": -37.6867477828988,
+        "lng": 145.012101112069,
+        "address": "53 Bedford Road, Ringwood",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 11.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 17.0,
+          "rate": 0
+        },
+        {
+          "description": "Amorzones",
+          "quantity": 45.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Collection x 45",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 5",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - GS x 73",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 17 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 11",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-02-29T13:00:00Z",
+        "end": "2024-11-21T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14646",
+      "type": "equipment",
+      "customer": "C0108",
+      "status": "closed",
+      "location": {
+        "lat": -37.8253771,
+        "lng": 144.9324501,
+        "address": "142 Turner St, 3207",
+        "suburb": "",
+        "postcode": "3207"
+      },
+      "equipment": [
+        {
+          "description": "Highway Guard 6m Section @ $0.60c per metre per day.",
+          "quantity": 10.0,
+          "rate": 0
+        },
+        {
+          "description": "6m Gawk kit Blk clothto suit JJ Hook/DB80 @ 0.15c per metre per day.",
+          "quantity": 10.0,
+          "rate": 0
+        },
+        {
+          "description": "5 DEGREE T CONNECTOR @ $3 ea per day.",
+          "quantity": 3.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Transport - Flat top semi (Dayshift) - x4 Trucks at Minimum 6 Hours Each.",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": 24.0
+        },
+        {
+          "type": "RPM Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery by RPM of T Connectors",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Delivery of T Connectors at late notice",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-03-04T13:00:00Z",
+        "end": "2025-04-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC BARRIERS",
+        "address": "Depot, 12 Terror St"
+      }
+    },
+    {
+      "id": "HC14668",
+      "type": "equipment",
+      "customer": "C0090",
+      "status": "closed",
+      "location": {
+        "lat": -37.8211486665884,
+        "lng": 144.964138353378,
+        "address": "Riverside Quay Reserve",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Amorzones",
+          "quantity": 10.0,
+          "rate": 0
+        },
+        {
+          "description": "Pin",
+          "quantity": 10.0,
+          "rate": 0
+        },
+        {
+          "description": "Bung",
+          "quantity": 10.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-03-11T13:00:00Z",
+        "end": "2025-02-26T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14670",
+      "type": "equipment",
+      "customer": "S0360",
+      "status": "closed",
+      "location": {
+        "lat": -37.8087926,
+        "lng": 144.9231612,
+        "address": "Footscray Road",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery x 2 (After hours)",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-02-29T13:00:00Z",
+        "end": "2025-05-30T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14673",
+      "type": "lighting",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8344409213908,
+        "lng": 144.974268010786,
+        "address": "GATE 14, Corner of St Kilda Rd/ Bowen Cr",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Light Tower Directional",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Light Tower Directional",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Directional LED Lighting Tower",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery x 5",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 5",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-03-03T13:00:00Z",
+        "end": "2024-10-09T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC14817",
+      "type": "barrier",
+      "customer": "C0247",
+      "status": "closed",
+      "location": {
+        "lat": -37.6960222330297,
+        "lng": 145.010709548504,
+        "address": "2 Hughes Parade, Reservoir VIC 3073",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 37.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 70.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 33.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-03-13T13:00:00Z",
+        "end": "2024-08-22T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15025",
+      "type": "signage",
+      "customer": "C0090",
+      "status": "closed",
+      "location": {
+        "lat": -37.8157829864553,
+        "lng": 144.939202443143,
+        "address": "Docklands",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS A Size Colour",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        },
+        {
+          "description": "VMS A Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-27T14:00:00Z",
+        "end": "2024-06-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15296",
+      "type": "barrier",
+      "customer": "C0052",
+      "status": "closed",
+      "location": {
+        "lat": -38.3221179200693,
+        "lng": 144.317231532321,
+        "address": "85 Geelong Rd",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 22.0,
+          "rate": 0
+        },
+        {
+          "description": "WFB End Treatments",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 23",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-04-10T14:00:00Z",
+        "end": "2024-08-15T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15417",
+      "type": "safety",
+      "customer": "C1058",
+      "status": "closed",
+      "location": {
+        "lat": -37.8105313936601,
+        "lng": 144.960670843855,
+        "address": "375 Elizabeth Street Melbourne",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "MASH Armorzones",
+          "quantity": 5.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 25.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-04-18T14:00:00Z",
+        "end": "2024-08-08T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15492",
+      "type": "equipment",
+      "customer": "C0678",
+      "status": "closed",
+      "location": {
+        "lat": -37.7613121911367,
+        "lng": 145.344972884684,
+        "address": "12 Melba Ave, Lilydale",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Portaboom",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Porta Boom",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Portaboom",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-05-14T14:00:00Z",
+        "end": "2024-09-30T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15594",
+      "type": "equipment",
+      "customer": "S0018",
+      "status": "closed",
+      "location": {
+        "lat": -38.0396357751834,
+        "lng": 145.227384713486,
+        "address": "1 Jamieson Way, Dandenong South",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-04-28T14:00:00Z",
+        "end": "2024-09-02T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15660",
+      "type": "barrier",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.817559366856,
+        "lng": 144.966990635533,
+        "address": "Flinders St",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 9.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 20.0,
+          "rate": 0
+        },
+        {
+          "description": "WFB End Treatments",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - Tilt trays",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 9 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-05-08T14:00:00Z",
+        "end": "2024-06-03T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15815",
+      "type": "signage",
+      "customer": "C1341",
+      "status": "closed",
+      "location": {
+        "lat": -38.1760515,
+        "lng": 145.1514866,
+        "address": "135 Golf Links Rd",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS C Size Colour",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-05-15T14:00:00Z",
+        "end": "2024-06-02T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15829",
+      "type": "lighting",
+      "customer": "C0108",
+      "status": "closed",
+      "location": {
+        "lat": -37.8276513,
+        "lng": 144.9296977,
+        "address": "542 Footscray Road, ",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Portable Traffic Light Hire",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Portable Traffic Light Hire",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-05-12T14:00:00Z",
+        "end": "2024-10-16T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15973",
+      "type": "signage",
+      "customer": "C1308",
+      "status": "closed",
+      "location": {
+        "lat": -37.836347662558,
+        "lng": 145.134684625106,
+        "address": "259 Middleborough Rd,",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "1 x VMS board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-09T14:00:00Z",
+        "end": "2024-06-13T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC15983",
+      "type": "barrier",
+      "customer": "C0090",
+      "status": "closed",
+      "location": {
+        "lat": -37.8092087293044,
+        "lng": 144.955690149218,
+        "address": "Near Queen Vic Market",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 29.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone Barrier Hire",
+          "quantity": 20.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone Barrier Hire",
+          "quantity": 13.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-23T14:00:00Z",
+        "end": "2025-04-29T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16009",
+      "type": "signage",
+      "customer": "C1308",
+      "status": "closed",
+      "location": {
+        "lat": -38.1493849397201,
+        "lng": 145.13516925992,
+        "address": "Mcmahons Rd &, Gertrude St,",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS C Size Colour",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-24T14:00:00Z",
+        "end": "2024-06-28T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16010",
+      "type": "signage",
+      "customer": "C1308",
+      "status": "closed",
+      "location": {
+        "lat": -37.876443617709,
+        "lng": 144.713236553059,
+        "address": "221-231 Old Geelong Rd,",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "1 x VMS board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-24T14:00:00Z",
+        "end": "2024-06-28T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16013",
+      "type": "signage",
+      "customer": "C1308",
+      "status": "closed",
+      "location": {
+        "lat": -38.0043126680116,
+        "lng": 145.249565692447,
+        "address": "101 Princes Hwy,",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS C Size Colour",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-02T14:00:00Z",
+        "end": "2024-06-06T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16142",
+      "type": "lighting",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8009400992142,
+        "lng": 144.959503474531,
+        "address": "",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Directional LED Lighting Tower",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-05-27T14:00:00Z",
+        "end": "2024-10-09T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16279",
+      "type": "barrier",
+      "customer": "C1376",
+      "status": "closed",
+      "location": {
+        "lat": -37.8008118826837,
+        "lng": 144.962489924706,
+        "address": "Gratton Street",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 22.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 22.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [],
+      "dates": {
+        "start": "2024-06-11T14:00:00Z",
+        "end": "2024-06-13T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16310",
+      "type": "lighting",
+      "customer": "S0082",
+      "status": "closed",
+      "location": {
+        "lat": -37.8193252254277,
+        "lng": 144.94319440797,
+        "address": "",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Directional LED Lighting Tower",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-23T14:00:00Z",
+        "end": "2024-07-01T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16361",
+      "type": "lighting",
+      "customer": "C0003",
+      "status": "closed",
+      "location": {
+        "lat": -37.5623051961621,
+        "lng": 143.860047526296,
+        "address": "",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Portable traffic Light Pedestrian",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        },
+        {
+          "description": "Portable traffic Light Pedestrian",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 2 SETS",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 1 set",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-13T14:00:00Z",
+        "end": "2024-10-03T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16385",
+      "type": "signage",
+      "customer": "C1131",
+      "status": "closed",
+      "location": {
+        "lat": -38.1470809,
+        "lng": 145.1362181,
+        "address": "Frankston",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "B Size Amber VMS",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-26T14:00:00Z",
+        "end": "2024-06-28T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16386",
+      "type": "signage",
+      "customer": "C1131",
+      "status": "closed",
+      "location": {
+        "lat": -38.2275345,
+        "lng": 145.0468333,
+        "address": "Mornington",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS C Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-26T14:00:00Z",
+        "end": "2024-06-28T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16398",
+      "type": "signage",
+      "customer": "C0137",
+      "status": "closed",
+      "location": {
+        "lat": -37.7256901,
+        "lng": 144.8643679,
+        "address": "Prahran",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS A Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "VMS A Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection - A/H x 1",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-13T14:00:00Z",
+        "end": "2024-06-14T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16438",
+      "type": "signage",
+      "customer": "C1149",
+      "status": "closed",
+      "location": {
+        "lat": -38.2269970234483,
+        "lng": 145.047628395259,
+        "address": "915 Nepean Hwy Mornington",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS C Size Colour",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-18T14:00:00Z",
+        "end": "2024-06-22T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16444",
+      "type": "barrier",
+      "customer": "C0109",
+      "status": "off-hired_(pending_final_invoice)",
+      "location": {
+        "lat": -37.8176010260358,
+        "lng": 144.966540355235,
+        "address": "Melbourne",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 2.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone gawk sceen",
+          "quantity": 14.0,
+          "rate": 0
+        },
+        {
+          "description": "WFB End Treatments",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 2 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 26",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-19T14:00:00Z",
+        "end": "2025-09-07T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16539",
+      "type": "safety",
+      "customer": "C1058",
+      "status": "closed",
+      "location": {
+        "lat": -37.8098101421725,
+        "lng": 144.961183229336,
+        "address": "375 Elizabeth Street,",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "44 x Mash Rated Armorzones",
+          "quantity": 14.0,
+          "rate": 0
+        },
+        {
+          "description": "44 x Gawk Screen",
+          "quantity": 14.0,
+          "rate": 0
+        },
+        {
+          "description": "RPM Hire Labour",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 20",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-24T14:00:00Z",
+        "end": "2025-03-30T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16561",
+      "type": "lighting",
+      "customer": "C0968",
+      "status": "closed",
+      "location": {
+        "lat": -37.5194445971461,
+        "lng": 143.850096048169,
+        "address": "Ballarat",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "3 x Directional Lighting Towers",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Peace Of Mind Damage Waiver - charged at 12.5% of the hire charge",
+          "quantity": null,
+          "rate": 0
+        },
+        {
+          "description": "",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-22T14:00:00Z",
+        "end": "2024-06-24T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16598",
+      "type": "signage",
+      "customer": "C0071",
+      "status": "closed",
+      "location": {
+        "lat": -37.7257094,
+        "lng": 144.8643847,
+        "address": "Ringwood",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS A Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "VMS A Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-24T14:00:00Z",
+        "end": "2024-06-27T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16692",
+      "type": "equipment",
+      "customer": "C0936",
+      "status": "closed",
+      "location": {
+        "lat": -38.1677442148362,
+        "lng": 144.41552589149,
+        "address": "",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        },
+        {
+          "description": "Arrow Board",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-30T14:00:00Z",
+        "end": "2025-01-30T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC16696",
+      "type": "barrier",
+      "customer": "C0052",
+      "status": "closed",
+      "location": {
+        "lat": -38.3221179200693,
+        "lng": 144.317231532321,
+        "address": "85 Geelong Rd",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "Armorzone Barrier Hire MASH",
+          "quantity": 30.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 14.0,
+          "rate": 0
+        },
+        {
+          "description": "Armorzone Water Filled Barrier MASH",
+          "quantity": 40.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Collection x 70 WFB",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        },
+        {
+          "type": "Collection x 14",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-06-13T14:00:00Z",
+        "end": "2024-08-15T14:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    },
+    {
+      "id": "HC18840",
+      "type": "signage",
+      "customer": "C0109",
+      "status": "closed",
+      "location": {
+        "lat": -37.8176010260358,
+        "lng": 144.966540355235,
+        "address": "Melbourne",
+        "suburb": "",
+        "postcode": null
+      },
+      "equipment": [
+        {
+          "description": "VMS A Size Amber",
+          "quantity": 1.0,
+          "rate": 0
+        }
+      ],
+      "transport_tasks": [
+        {
+          "type": "Delivery",
+          "charge_rate": 0,
+          "total_charge": 0,
+          "quantity": null
+        }
+      ],
+      "dates": {
+        "start": "2024-05-31T14:00:00Z",
+        "end": "2025-01-30T13:00:00Z"
+      },
+      "depot": {
+        "name": "VIC ELECTRONICS",
+        "address": "Depot"
+      }
+    }
+  ],
+  "optimization_potential": {
+    "route_consolidation": {
+      "description": "Combine deliveries/collections in same area",
+      "potential_saving": 0.15,
+      "estimated_value": 0.0
+    },
+    "asset_swapping": {
+      "description": "Replace expensive external rentals",
+      "potential_saving": 0.1,
+      "estimated_value": 0
+    },
+    "predictive_scheduling": {
+      "description": "Optimize timing based on demand patterns",
+      "potential_saving": 0.08,
+      "estimated_value": 0.0
+    }
+  }
+}

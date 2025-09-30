@@ -15,20 +15,29 @@ declare global {
 interface MapViewProps {
   initialAssets: Asset[];
   optimizationResults: OptimizationResult | null;
+  optimizationProgress?: any; // 实时优化进度
 }
 
 // --- Helper Functions & Constants ---
+// 工地状态颜色映射
 const STATUS_COLORS: Record<string, string> = {
-  'available': '#22c55e', // green-500
-  'in_use': '#3b82f6', // blue-500
-  'needs_inspection': '#f97316', // orange-500
-  'rented_from_competitor': '#ef4444', // red-500
+  'pending_delivery': '#f59e0b',     // amber-500 - 等待送货
+  'pending_collection': '#8b5cf6',   // violet-500 - 等待回收
+  'active_operations': '#3b82f6',    // blue-500 - 有多个运输任务
+  'deployed': '#22c55e',             // green-500 - 已部署稳定运行
+  'competitor_rental': '#ef4444',    // red-500 - 竞争对手租赁
+  
+  // 兼容旧状态
+  'available': '#f59e0b',
+  'in_use': '#3b82f6',
+  'needs_inspection': '#f97316',
+  'rented_from_competitor': '#ef4444',
 };
 
 const ROUTE_COLORS = ['#16a34a', '#c026d3', '#db2777', '#0ea5e9', '#f59e0b', '#8b5cf6']; // green, fuchsia, pink, cyan, amber, violet
 
 // --- Component ---
-const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
+const MapView = ({ initialAssets, optimizationResults, optimizationProgress }: MapViewProps) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
   const markers = useRef<Marker[]>([]);
@@ -44,7 +53,7 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
     });
   }, []);
 
-  // Effect 2: Render Initial Assets
+  // Effect 2: Render Contract Sites (each site may contain multiple equipment)
   useEffect(() => {
     if (!map.current || initialAssets.length === 0) return;
     
@@ -52,7 +61,32 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
     markers.current.forEach(marker => marker.remove());
     markers.current = [];
 
+    // Each asset represents a contract site with multiple equipment items
+    // 如果同一位置有多个工地，只显示有任务的
+    const uniqueLocations = new Map<string, Asset>();
+    
     initialAssets.forEach(asset => {
+      const key = `${asset.location.lat.toFixed(6)},${asset.location.lng.toFixed(6)}`;
+      const existing = uniqueLocations.get(key);
+      
+      // 如果该位置已有工地，选择有任务的那个
+      if (existing) {
+        const assetHasTasks = asset.transport_tasks && asset.transport_tasks.length > 0;
+        const existingHasTasks = existing.transport_tasks && existing.transport_tasks.length > 0;
+        
+        if (assetHasTasks && !existingHasTasks) {
+          // 当前有任务，existing没有 → 替换
+          uniqueLocations.set(key, asset);
+          console.log(`📍 Same location: Replacing ${existing.id} (no tasks) with ${asset.id} (has tasks)`);
+        }
+      } else {
+        uniqueLocations.set(key, asset);
+      }
+    });
+    
+    const assetsToDisplay = Array.from(uniqueLocations.values());
+    
+    assetsToDisplay.forEach(asset => {
       const el = document.createElement('div');
       el.className = 'marker';
       el.style.backgroundColor = STATUS_COLORS[asset.status] || '#64748b';
@@ -76,25 +110,63 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
         el.style.boxShadow = '0 2px 8px rgba(0,0,0,0.3)';
       });
 
+      // Build equipment list
+      const equipmentList = asset.equipment && asset.equipment.length > 0
+        ? asset.equipment.slice(0, 3).map((eq: any) => 
+            `<li style="font-size: 11px; margin-bottom: 2px;">${eq.description} ${eq.quantity > 1 ? `<strong>(×${eq.quantity})</strong>` : ''}</li>`
+          ).join('')
+        : '<li style="font-size: 11px; color: #94a3b8;">No equipment data</li>';
+      
+      // Build transport tasks list
+      const transportList = asset.transport_tasks && asset.transport_tasks.length > 0
+        ? asset.transport_tasks.slice(0, 5).map((task: any) => {
+            const isDelivery = task.type.toLowerCase().includes('delivery');
+            const icon = isDelivery ? '📦' : '🔄';
+            return `<li style="font-size: 11px; margin-bottom: 2px;">${icon} ${task.type}</li>`;
+          }).join('')
+        : '';
+      
+      const transportSection = transportList 
+        ? `<div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid #e5e7eb;">
+             <strong style="font-size: 12px; color: #475569;">Transport Tasks:</strong>
+             <ul style="margin: 4px 0; padding-left: 20px; list-style: none;">
+               ${transportList}
+             </ul>
+           </div>`
+        : '<div style="margin-top: 6px; font-size: 11px; color: #10b981;">✓ No pending transport</div>';
+      
+      // Status badge with clearer descriptions
+      const statusLabels: Record<string, string> = {
+        'pending_delivery': '📦 Setup Required',      // 需要设备设置
+        'pending_collection': '🔄 Pickup Required',   // 需要设备回收
+        'active_operations': '⚡ Multi-Task Site',    // 多项任务工地
+        'deployed': '✓ Deployed',                    // 已部署稳定
+        'competitor_rental': '⚠️ External Rental',    // 外部租赁
+      };
+
       const popupContent = `
-        <div style="padding: 8px; font-family: system-ui, -apple-system, sans-serif;">
-          <h3 style="margin: 0 0 8px 0; font-size: 16px; font-weight: bold; color: #1e293b;">
-            ${asset.id}
+        <div style="padding: 12px; font-family: system-ui, -apple-system, sans-serif; width: 240px; box-sizing: border-box; overflow: hidden;">
+          <h3 style="margin: 0 0 6px 0; font-size: 14px; font-weight: bold; color: #0f172a;">
+            🏗️ ${asset.id}
           </h3>
-          <div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px;">
-            <div><strong>Type:</strong> ${asset.type}</div>
-            <div><strong>Status:</strong> 
-              <span style="color: ${STATUS_COLORS[asset.status]}; font-weight: 600;">
-                ${asset.status.replace(/_/g, ' ')}
-              </span>
-            </div>
-            ${asset.health_score ? `
-              <div><strong>Health Score:</strong> 
-                <span style="color: ${asset.health_score > 80 ? '#22c55e' : asset.health_score > 60 ? '#f59e0b' : '#ef4444'}; font-weight: 600;">
-                  ${asset.health_score}%
-                </span>
+          <div style="font-size: 11px; color: #64748b; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid #e2e8f0;">
+            ${asset.customer ? `👤 Customer: <strong>${asset.customer}</strong>` : 'Contract Site'}
+            ${asset.location?.suburb ? `<br/>📍 ${asset.location.suburb}` : ''}
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 6px; font-size: 12px;">
+            <div style="background: ${STATUS_COLORS[asset.status]}15; padding: 4px 8px; border-radius: 5px; border-left: 3px solid ${STATUS_COLORS[asset.status]}; display: inline-flex; flex-direction: column; max-width: 140px;">
+              <div style="font-size: 9px; color: #64748b; font-weight: 600; margin-bottom: 2px;">Status</div>
+              <div style="color: ${STATUS_COLORS[asset.status]}; font-weight: 700; font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                ${statusLabels[asset.status] || asset.status.replace(/_/g, ' ')}
               </div>
-            ` : ''}
+            </div>
+            <div style="margin-top: 2px;">
+              <strong style="font-size: 11px; color: #475569;">Equipment Deployed:</strong>
+              <ul style="margin: 3px 0; padding-left: 18px;">
+                ${equipmentList}
+              </ul>
+              </div>
+            ${transportSection}
           </div>
         </div>
       `;
@@ -113,11 +185,11 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
       markers.current.push(marker);
     });
 
-    // Add main depot marker
+    // Add main depot marker (Melbourne CBD - Real depot location)
     const depotEl = document.createElement('div');
     depotEl.style.backgroundColor = '#8b5cf6'; // purple
-    depotEl.style.width = '30px';
-    depotEl.style.height = '30px';
+    depotEl.style.width = '35px';
+    depotEl.style.height = '35px';
     depotEl.style.borderRadius = '6px';
     depotEl.style.border = '3px solid white';
     depotEl.style.boxShadow = '0 2px 8px rgba(139, 92, 246, 0.5)';
@@ -126,7 +198,7 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
     depotEl.style.justifyContent = 'center';
     depotEl.style.cursor = 'pointer';
     depotEl.style.transition = 'box-shadow 0.2s';
-    depotEl.innerHTML = '<span style="color: white; font-weight: bold; font-size: 14px;">D1</span>';
+    depotEl.innerHTML = '<span style="color: white; font-weight: bold; font-size: 16px;">🏭</span>';
     
     // Add hover effect for depot
     depotEl.addEventListener('mouseenter', () => {
@@ -139,91 +211,148 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
     const depotPopup = new mapboxgl.Popup({ 
       offset: 25,
       closeButton: false
-    }).setHTML('<div style="padding: 8px; font-weight: bold;">Central Depot</div>');
+    }).setHTML('<div style="padding: 8px; font-weight: bold;">Main Depot (CBD)<br/><small>Equipment Storage & Distribution</small></div>');
 
     const depotMarker = new mapboxgl.Marker(depotEl)
-      .setLngLat([144.9631, -37.7950])
+      .setLngLat([144.9631, -37.8136]) // Real Melbourne CBD depot coordinates
       .setPopup(depotPopup)
       .addTo(map.current!);
     
     markers.current.push(depotMarker);
-
-    // Add secondary depot marker
-    const secondDepotEl = document.createElement('div');
-    secondDepotEl.style.backgroundColor = '#0ea5e9'; // cyan
-    secondDepotEl.style.width = '30px';
-    secondDepotEl.style.height = '30px';
-    secondDepotEl.style.borderRadius = '6px';
-    secondDepotEl.style.border = '3px solid white';
-    secondDepotEl.style.boxShadow = '0 2px 8px rgba(14, 165, 233, 0.5)';
-    secondDepotEl.style.display = 'flex';
-    secondDepotEl.style.alignItems = 'center';
-    secondDepotEl.style.justifyContent = 'center';
-    secondDepotEl.style.cursor = 'pointer';
-    secondDepotEl.style.transition = 'box-shadow 0.2s';
-    secondDepotEl.innerHTML = '<span style="color: white; font-weight: bold; font-size: 14px;">D2</span>';
-    
-    secondDepotEl.addEventListener('mouseenter', () => {
-      secondDepotEl.style.boxShadow = '0 4px 12px rgba(14, 165, 233, 0.7)';
-    });
-    secondDepotEl.addEventListener('mouseleave', () => {
-      secondDepotEl.style.boxShadow = '0 2px 8px rgba(14, 165, 233, 0.5)';
-    });
-
-    const secondDepotPopup = new mapboxgl.Popup({ 
-      offset: 25,
-      closeButton: false
-    }).setHTML('<div style="padding: 8px; font-weight: bold;">Maintenance Depot</div>');
-
-    const secondDepotMarker = new mapboxgl.Marker(secondDepotEl)
-      .setLngLat([144.9500, -37.8250])
-      .setPopup(secondDepotPopup)
-      .addTo(map.current!);
-    
-    markers.current.push(secondDepotMarker);
-
-    // Add new job site marker
-    const jobSiteEl = document.createElement('div');
-    jobSiteEl.style.backgroundColor = '#f59e0b'; // amber
-    jobSiteEl.style.width = '30px';
-    jobSiteEl.style.height = '30px';
-    jobSiteEl.style.borderRadius = '50%';
-    jobSiteEl.style.border = '3px solid white';
-    jobSiteEl.style.boxShadow = '0 2px 8px rgba(245, 158, 11, 0.5)';
-    jobSiteEl.style.display = 'flex';
-    jobSiteEl.style.alignItems = 'center';
-    jobSiteEl.style.justifyContent = 'center';
-    jobSiteEl.style.cursor = 'pointer';
-    jobSiteEl.style.transition = 'box-shadow 0.2s';
-    jobSiteEl.innerHTML = '<span style="color: white; font-weight: bold; font-size: 12px;">JOB</span>';
-    
-    jobSiteEl.addEventListener('mouseenter', () => {
-      jobSiteEl.style.boxShadow = '0 4px 12px rgba(245, 158, 11, 0.7)';
-    });
-    jobSiteEl.addEventListener('mouseleave', () => {
-      jobSiteEl.style.boxShadow = '0 2px 8px rgba(245, 158, 11, 0.5)';
-    });
-
-    const jobSitePopup = new mapboxgl.Popup({ 
-      offset: 25,
-      closeButton: false
-    }).setHTML('<div style="padding: 8px; font-weight: bold;">New Job Site</div>');
-
-    const jobSiteMarker = new mapboxgl.Marker(jobSiteEl)
-      .setLngLat([144.9820, -37.8145])
-      .setPopup(jobSitePopup)
-      .addTo(map.current!);
-    
-    markers.current.push(jobSiteMarker);
   }, [initialAssets]);
 
-  // Effect 3: Render Optimization Routes
+  // Effect 3: Render Real-time Optimization Progress (Dashed Lines)
+  useEffect(() => {
+    const mapInstance = map.current;
+    if (!mapInstance || !optimizationProgress) return;
+    
+    console.log(`🔄 Rendering optimization progress: Generation ${optimizationProgress.generation}`);
+    
+    // 清除之前的进度虚线
+    const clearProgressLines = () => {
+      for (let i = 0; i < 4; i++) {
+        if (mapInstance.getLayer(`progress-route-${i}`)) {
+          mapInstance.removeLayer(`progress-route-${i}`);
+        }
+        if (mapInstance.getSource(`progress-route-${i}`)) {
+          mapInstance.removeSource(`progress-route-${i}`);
+        }
+      }
+    };
+    
+    clearProgressLines();
+    
+    // 渲染当前代的候选解为虚线（确保所有车都显示）
+    const fetchAndRenderProgressRoutes = async () => {
+      console.log(`🎨 Rendering generation ${optimizationProgress.generation} with ${optimizationProgress.routes.length} routes`);
+      
+      // 并行获取所有路线的真实道路（加速渲染）
+      const routePromises = optimizationProgress.routes.map(async (route: any, i: number) => {
+        const waypoints = route.route.map((p: any) => [p.lng, p.lat] as [number, number]);
+        
+        // 简化waypoints如果超过25个
+        let simplifiedWaypoints = waypoints;
+        if (waypoints.length > 25) {
+          const simplified: [number, number][] = [waypoints[0]];
+          const step = Math.max(1, Math.floor((waypoints.length - 2) / 23));
+          for (let j = step; j < waypoints.length - 1; j += step) {
+            if (simplified.length < 24) simplified.push(waypoints[j]);
+          }
+          simplified.push(waypoints[waypoints.length - 1]);
+          simplifiedWaypoints = simplified;
+        }
+        
+        try {
+          const coordinates = simplifiedWaypoints.map((point: [number, number]) => `${point[0]},${point[1]}`).join(';');
+          const url = `https://api.mapbox.com/directions/v5/mapbox/driving/${coordinates}?geometries=geojson&overview=full&access_token=${mapboxgl.accessToken}`;
+          
+          const response = await fetch(url);
+          if (response.ok) {
+            const data = await response.json();
+            if (data.routes && data.routes[0]) {
+              return { index: i, coordinates: data.routes[0].geometry.coordinates };
+            }
+          }
+        } catch (error) {
+          console.error(`Error fetching route ${i}:`, error);
+        }
+        
+        // Fallback: 简单插值
+        const interpolated: [number, number][] = [];
+        for (let j = 0; j < simplifiedWaypoints.length - 1; j++) {
+          const start = simplifiedWaypoints[j];
+          const end = simplifiedWaypoints[j + 1];
+          for (let k = 0; k <= 10; k++) {
+            const t = k / 10;
+            interpolated.push([
+              start[0] + (end[0] - start[0]) * t,
+              start[1] + (end[1] - start[1]) * t
+            ]);
+          }
+        }
+        return { index: i, coordinates: interpolated };
+      });
+      
+      // 等待所有路线都获取完成
+      const allRoutes = await Promise.all(routePromises);
+      
+      // 渲染所有路线
+      allRoutes.forEach(({ index, coordinates }) => {
+        if (!coordinates || coordinates.length === 0) return;
+        
+        const geojsonSource: GeoJSON.Feature<GeoJSON.LineString> = {
+          type: 'Feature',
+          properties: {},
+          geometry: { type: 'LineString', coordinates },
+        };
+        
+        const layerId = `progress-route-${index}`;
+        
+        // 如果已存在，先移除
+        if (mapInstance.getSource(layerId)) {
+          if (mapInstance.getLayer(layerId)) {
+            mapInstance.removeLayer(layerId);
+          }
+          mapInstance.removeSource(layerId);
+        }
+        
+        mapInstance.addSource(layerId, { type: 'geojson', data: geojsonSource });
+        
+        // 使用对应车辆的颜色
+        const routeColor = ROUTE_COLORS[index % ROUTE_COLORS.length];
+        
+        mapInstance.addLayer({
+          id: layerId,
+          type: 'line',
+          source: layerId,
+          layout: { 'line-join': 'round', 'line-cap': 'round' },
+          paint: {
+            'line-color': routeColor, // 保持各自颜色，不变绿
+            'line-width': optimizationProgress.isBest ? 5 : 3, // 最优解稍粗一点
+            'line-opacity': optimizationProgress.isBest ? 0.6 : 0.35, // 最优解更明显
+            'line-dasharray': [6, 3],
+          },
+        });
+        
+        console.log(`✅ Rendered progress route ${index} (${optimizationProgress.routes[index].vehicleId}) in ${routeColor}`);
+      });
+    };
+    
+    fetchAndRenderProgressRoutes();
+    
+    return () => {
+      clearProgressLines();
+    };
+  }, [optimizationProgress]);
+
+  // Effect 4: Render Final Optimization Routes (Solid Lines)
   useEffect(() => {
     const mapInstance = map.current;
     if (!mapInstance) return;
 
-    // Function to clear existing routes
+    // Function to clear existing routes (including alternatives)
     const clearRoutes = () => {
+      // Clear main routes
       ROUTE_COLORS.forEach((_, index) => {
         if (mapInstance.getLayer(`route-line-${index}`)) {
           mapInstance.removeLayer(`route-line-${index}`);
@@ -235,6 +364,23 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
           mapInstance.removeSource(`route-${index}`);
         }
       });
+      
+      // Clear alternative routes (dashed lines)
+      for (let altIndex = 0; altIndex < 3; altIndex++) {
+        for (let routeIndex = 0; routeIndex < 4; routeIndex++) {
+          const layerId = `alt-route-${altIndex}-${routeIndex}`;
+          if (mapInstance.getLayer(`${layerId}-bg`)) {
+            mapInstance.removeLayer(`${layerId}-bg`);
+          }
+          if (mapInstance.getLayer(layerId)) {
+            mapInstance.removeLayer(layerId);
+          }
+          if (mapInstance.getSource(layerId)) {
+            mapInstance.removeSource(layerId);
+          }
+        }
+      }
+      
       // Clear vehicle markers - 确保完全清理
       if (window.truckMarkers && Array.isArray(window.truckMarkers)) {
         console.log(`Clearing ${window.truckMarkers.length} existing truck markers`);
@@ -256,12 +402,27 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
     };
 
     // Function to fetch real road directions using Mapbox Directions API
-    const fetchRealRoute = async (waypoints: [number, number][]): Promise<[number, number][]> => {
+    const fetchRealRoute = async (waypoints: [number, number][]): Promise<{ coordinates: [number, number][]; distance: number }> => {
       // 启用Mapbox API获取真实道路
       const USE_MAPBOX_API = true;
       
-      // 记录输入的waypoints
-      console.log('fetchRealRoute input waypoints:', waypoints);
+      // Mapbox API限制：最多25个waypoints
+      if (waypoints.length > 25) {
+        console.warn(`⚠️ Too many waypoints (${waypoints.length}), simplifying to 25...`);
+        // 简化waypoints：保留起点、终点和均匀采样的中间点
+        const simplified: [number, number][] = [waypoints[0]]; // 起点
+        
+        const step = Math.floor((waypoints.length - 2) / 23); // 中间23个点
+        for (let i = 1; i < waypoints.length - 1; i += step) {
+          if (simplified.length < 24) {
+            simplified.push(waypoints[i]);
+          }
+        }
+        
+        simplified.push(waypoints[waypoints.length - 1]); // 终点
+        console.log(`Simplified ${waypoints.length} waypoints to ${simplified.length}`);
+        waypoints = simplified;
+      }
       
       if (!USE_MAPBOX_API) {
         console.log('Using direct waypoints (Mapbox API disabled for debugging)');
@@ -288,13 +449,11 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
         }
         
         console.log(`Interpolated ${waypoints.length} waypoints to ${interpolatedRoute.length} points`);
-        return interpolatedRoute;
+        return { coordinates: interpolatedRoute, distance: 0 };
       }
       
-      // If only 2 points or less, just return them
-      if (waypoints.length <= 2) {
-        return waypoints;
-      }
+      // 即使只有2个点，也要调用API获取真实道路路径
+      // 之前的逻辑会导致直线连接，现在所有情况都调用API
       
       // Convert waypoints to string format for API
       const coordinates = waypoints.map(point => `${point[0]},${point[1]}`).join(';');
@@ -317,22 +476,34 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
           
           if (data.routes && data.routes.length > 0 && data.routes[0].geometry) {
             const routeCoords = data.routes[0].geometry.coordinates;
-            console.log(`Route ${waypoints.length} waypoints -> ${routeCoords.length} points`);
-            
-            // 验证路径起点和终点
-            console.log('API Route start:', routeCoords[0], 'Expected:', waypoints[0]);
-            console.log('API Route end:', routeCoords[routeCoords.length - 1], 'Expected:', waypoints[waypoints.length - 1]);
-            
-            return routeCoords;
+            const realDistance = data.routes[0].distance / 1000; // 转换为km
+            return { coordinates: routeCoords, distance: realDistance };
           }
         }
       } catch (error) {
         console.error('Error fetching directions:', error);
       }
       
-      // Fallback to straight lines if API fails
-      console.log('Using fallback straight line route');
-      return waypoints;
+      // Fallback: 创建平滑插值路径（不是直线）
+      console.warn('⚠️ Mapbox API failed, using interpolated fallback route');
+      const interpolatedRoute: [number, number][] = [];
+      
+      for (let i = 0; i < waypoints.length - 1; i++) {
+        const start = waypoints[i];
+        const end = waypoints[i + 1];
+        const steps = 20; // 每两个waypoint之间插入20个点
+        
+        for (let j = 0; j <= steps; j++) {
+          const t = j / steps;
+          interpolatedRoute.push([
+            start[0] + (end[0] - start[0]) * t,
+            start[1] + (end[1] - start[1]) * t
+          ]);
+        }
+      }
+      
+      console.log(`Fallback interpolated ${waypoints.length} waypoints to ${interpolatedRoute.length} points`);
+      return { coordinates: interpolatedRoute, distance: 0 };
     };
 
     // Wait for map to be loaded
@@ -348,36 +519,22 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
         window.truckMarkers = [];
       }
 
+      // 虚线已经在Effect 3中实时渲染了，这里直接渲染最优解实线
+      console.log(`✅ Rendering final best solution (solid lines)`);
+
       // 按顺序处理每个路径，确保索引正确
       for (let index = 0; index < optimizationResults.optimizedRoutes.length; index++) {
         const route = optimizationResults.optimizedRoutes[index];
         const waypoints = route.route.map(p => [p.lng, p.lat] as [number, number]);
         
+        
         // Fetch real road directions
-        const routeCoordinates = await fetchRealRoute(waypoints);
+        const routeResult = await fetchRealRoute(waypoints);
+        const routeCoordinates = routeResult.coordinates;
+        const realRoadDistance = routeResult.distance;
         
-        // Debug log - 详细记录路径信息
-        console.log(`\n========== Route ${index} (${route.vehicleId}) ==========`);
-        console.log('Original waypoints from client.ts:', route.route);
-        console.log('Converted waypoints for Mapbox:', waypoints);
-        console.log('Waypoints count:', waypoints.length);
-        console.log('Route points returned by API:', routeCoordinates.length);
-        console.log('Expected start:', waypoints[0], 'Actual start:', routeCoordinates[0]);
-        console.log('Expected end:', waypoints[waypoints.length - 1], 'Actual end:', routeCoordinates[routeCoordinates.length - 1]);
+        console.log(`${route.vehicleId}: ${routeCoordinates.length} points, ${realRoadDistance.toFixed(1)} km`);
         
-        // 验证路径是否正确
-        const startMatches = Math.abs(waypoints[0][0] - routeCoordinates[0][0]) < 0.001 && 
-                            Math.abs(waypoints[0][1] - routeCoordinates[0][1]) < 0.001;
-        const endMatches = Math.abs(waypoints[waypoints.length - 1][0] - routeCoordinates[routeCoordinates.length - 1][0]) < 0.001 && 
-                          Math.abs(waypoints[waypoints.length - 1][1] - routeCoordinates[routeCoordinates.length - 1][1]) < 0.001;
-        
-        if (!startMatches) {
-          console.warn(`⚠️ Start point mismatch for ${route.vehicleId}!`);
-        }
-        if (!endMatches) {
-          console.warn(`⚠️ End point mismatch for ${route.vehicleId}!`);
-        }
-        console.log('=========================================\n');
         
         const geojsonSource: GeoJSON.Feature<GeoJSON.LineString> = {
           type: 'Feature',
@@ -559,13 +716,9 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
           
           console.log(`${vehicleId}: ${path.length} points, total distance: ${totalDistance.toFixed(6)}`);
           
-          // 设置恒定车速（所有车辆相同的速度）
-          // 假设地图单位大致对应经纬度，1度约等于111公里
-          // 设置速度为每秒移动 0.001 度，相当于约 400km/h 的速度（5倍加速）
-          const constantSpeed = 0.001 * 4; // 所有车辆的相同速度（度/秒）
+          // 设置恒定车速（所有车辆相同的速度 - 5倍加速）
+          const constantSpeed = 0.001 * 15; // 5倍加速（度/秒）
           const estimatedDurationSeconds = totalDistance / constantSpeed;
-          let currentDistance = 0;
-          let currentSegment = 0;
           let segmentProgress = 0;
           
           const startTime = performance.now();
@@ -626,6 +779,8 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
         routeCoordinates.forEach(coord => bounds.extend(coord));
       }
 
+      // 虚线进度在优化完成后会自动清除（optimizationProgress设为null）
+
       if (!bounds.isEmpty()) {
         mapInstance.fitBounds(bounds, { padding: 100, duration: 1500 });
       }
@@ -640,12 +795,7 @@ const MapView = ({ initialAssets, optimizationResults }: MapViewProps) => {
       mapInstance.on('move', () => {
         // 验证标记是否跟随地图移动
         if (window.truckMarkers && window.truckMarkers.length > 0) {
-          const firstMarker = window.truckMarkers[0];
-          if (firstMarker && firstMarker.getLngLat) {
-            // 定期检查第一个标记的位置（用于调试）
-            const pos = firstMarker.getLngLat();
-            // 只在需要时记录，避免日志过多
-          }
+          // 标记正常工作
         }
       });
     };

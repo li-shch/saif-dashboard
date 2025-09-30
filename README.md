@@ -10,9 +10,9 @@
 
 ## 🎬 Live Demo
 
-![SAIF Dashboard Demo](./assets/demo-preview.gif)
+![SAIF Dashboard Demo](./assets/demo-preview2.gif)
 
-*Showcasing: Real-time AI optimization → Multi-stage decision process → Animated route planning → Cost/emission impact*
+*Showcasing: Enhanced evolutionary algorithms → Real-time optimization visualization → Multi-task site intelligence → Mapbox-powered route planning*
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### System Architecture
 <div align="center">
-<img src="./assets/architecture-diagram.png" alt="SAIF AI Architecture" width="600">
+<img src="./assets/architecture-diagram2.png" alt="SAIF AI Architecture" width="600">
 </div>
 
 ---

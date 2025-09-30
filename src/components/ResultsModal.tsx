@@ -1,6 +1,6 @@
 // src/components/ResultsModal.tsx
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Bot, TrendingUp, Leaf, Route } from 'lucide-react';
+import { X, Bot } from 'lucide-react';
 import type { OptimizationResult } from '../api/client';
 
 interface ResultsModalProps {
@@ -95,86 +95,113 @@ const ResultsModal = ({ results, onClose }: ResultsModalProps) => {
                 </div>
                 <div>
                   <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#111827' }}>
-                    AI Optimization Complete
+                    Optimization Complete
                   </h2>
                   <p style={{ marginTop: '0.25rem', color: '#6b7280', fontSize: '0.875rem' }}>
-                    SAIF has analyzed {results.decisionsMade.length} assets and generated optimal routes
+                    {results.explanation ? results.explanation.taskConsolidation : 'Route optimization completed successfully'}
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* 可滚动的决策列表 */}
+            {/* 优化结果内容 */}
             <div style={{
               flex: 1,
               overflowY: 'auto',
               padding: '1.5rem',
-              backgroundColor: '#f9fafb',
-              minHeight: '300px',
-              maxHeight: '400px'
+              backgroundColor: '#f9fafb'
             }}>
-              <h3 style={{ 
-                fontSize: '0.875rem', 
-                fontWeight: '600', 
-                color: '#6b7280',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                marginBottom: '1rem'
-              }}>
-                Decision Details
-              </h3>
-              <div style={{ 
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '0.75rem'
-              }}>
-                {results.decisionsMade.map((decision, index) => (
-                  <motion.div 
-                    key={index}
-                    initial={{ opacity: 0, x: -10 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + index * 0.05 }}
-                    style={{
-                      backgroundColor: 'white',
-                      padding: '1rem',
+              {/* 执行计划总览 */}
+              <div style={{ marginBottom: '1.5rem' }}>
+                <h3 style={{ 
+                  fontSize: '0.9rem', 
+                  fontWeight: '700', 
+                  color: '#1f2937',
+                  marginBottom: '1rem'
+                }}>
+                  Execution Plan Summary
+                </h3>
+                
+                {/* 路线统计 */}
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1fr 1fr',
+                  gap: '0.75rem',
+                  marginBottom: '1rem'
+                }}>
+                  <div style={{
+                    background: 'linear-gradient(135deg, #dbeafe, #bfdbfe)',
+                    borderRadius: '0.5rem',
+                    padding: '0.75rem',
+                    border: '1px solid #3b82f6'
+                  }}>
+                    <div style={{ fontSize: '0.65rem', color: '#1e40af', fontWeight: '600', marginBottom: '0.25rem' }}>
+                      OPTIMIZED ROUTES
+                    </div>
+                    <div style={{ fontSize: '1.75rem', fontWeight: '700', color: '#1e3a8a' }}>
+                      {results.optimizedRoutes.length}
+                    </div>
+                    <div style={{ fontSize: '0.6rem', color: '#3b82f6', marginTop: '0.25rem' }}>
+                      vehicles deployed
+                    </div>
+                  </div>
+                  
+                  <div style={{
+                    background: 'linear-gradient(135deg, #fef3c7, #fde68a)',
+                    borderRadius: '0.5rem',
+                    padding: '0.75rem',
+                    border: '1px solid #fbbf24'
+                  }}>
+                    <div style={{ fontSize: '0.65rem', color: '#92400e', fontWeight: '600', marginBottom: '0.25rem' }}>
+                      SITES VISITED
+                    </div>
+                    <div style={{ fontSize: '1.75rem', fontWeight: '700', color: '#b45309' }}>
+                      {results.explanation?.totalSitesVisited || 66}
+                    </div>
+                    <div style={{ fontSize: '0.6rem', color: '#d97706', marginTop: '0.25rem' }}>
+                      this week
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              {/* 路线详情 - 展示每条路线访问的工地 */}
+              <div style={{ marginBottom: '1rem' }}>
+                <h3 style={{ 
+                  fontSize: '0.85rem', 
+                  fontWeight: '700', 
+                  color: '#374151',
+                  marginBottom: '0.75rem'
+                }}>
+                  🚚 Route Details
+                </h3>
+                
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  {results.optimizedRoutes.map((route, index) => (
+                    <div key={index} style={{
+                      background: 'white',
                       borderRadius: '0.5rem',
-                      border: '1px solid #e5e7eb',
-                      boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)'
-                    }}
-                  >
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                      <div style={{ flex: 1 }}>
-                        <p style={{ fontWeight: '600', color: '#1f2937', fontSize: '0.9rem' }}>
-                          <span style={{ 
-                            color: decision.decision === 'EXECUTE_SWAP' ? '#8b5cf6' : 
-                                   decision.decision === 'STAY_ON_SITE' ? '#10b981' :
-                                   decision.decision === 'RETRIEVE_TO_DEPOT' ? '#3b82f6' : '#f59e0b',
-                            fontWeight: '700'
-                          }}>
-                            {decision.decision.replace(/_/g, ' ')}
-                          </span>
-                        </p>
-                        <p style={{ fontSize: '0.875rem', color: '#4b5563', marginTop: '0.25rem' }}>
-                          Asset: <strong>{decision.assetId}</strong>
-                        </p>
-                        <p style={{ fontSize: '0.8125rem', color: '#6b7280', marginTop: '0.5rem' }}>
-                          {decision.reason}
-                        </p>
-                        {decision.relatedAssetId && (
-                          <p style={{ fontSize: '0.75rem', color: '#9ca3af', marginTop: '0.5rem' }}>
-                            <span style={{ 
-                              backgroundColor: '#f3f4f6', 
-                              padding: '0.125rem 0.5rem',
-                              borderRadius: '0.25rem'
-                            }}>
-                              Related: {decision.relatedAssetId}
-                            </span>
-                          </p>
+                      padding: '0.75rem',
+                      border: `2px solid ${['#16a34a', '#c026d3', '#db2777', '#0ea5e9'][index]}`,
+                      borderLeft: `6px solid ${['#16a34a', '#c026d3', '#db2777', '#0ea5e9'][index]}`
+                    }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                        <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#1f2937' }}>
+                          {route.vehicleId}
+                        </div>
+                        {route.distance && (
+                          <div style={{ fontSize: '0.7rem', color: '#6b7280' }}>
+                            {route.distance.toFixed(1)} km
+                          </div>
                         )}
                       </div>
-                    </div>
-                  </motion.div>
+                      <div style={{ fontSize: '0.65rem', color: '#6b7280' }}>
+                        Visits {route.route.length - 2} sites (depot → sites → depot)
+                      </div>
+                  </div>
                 ))}
+                </div>
               </div>
             </div>
 
@@ -189,49 +216,47 @@ const ResultsModal = ({ results, onClose }: ResultsModalProps) => {
                 borderTop: '2px solid #86efac'
               }}
             >
-              <div style={{ textAlign: 'center' }}>
-                <p style={{ fontSize: '0.75rem', fontWeight: '600', color: '#166534', marginBottom: '0.25rem' }}>
-                  TOTAL OPTIMIZATION IMPACT
-                </p>
-                <p style={{ 
-                  fontSize: '2.5rem', 
-                  fontWeight: 'bold', 
-                  background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  letterSpacing: '-0.025em',
-                  lineHeight: '1'
-                }}>
-                  ${results.summary.costSaving.toFixed(2)}
-                </p>
-                <p style={{ fontSize: '0.75rem', color: '#166534', marginTop: '0.125rem' }}>
-                  Cost Savings
-                </p>
-              </div>
-              
               <div style={{ 
-                display: 'flex', 
-                justifyContent: 'center', 
-                gap: '2.5rem',
-                marginTop: '0.75rem'
+                background: 'linear-gradient(135deg, #d1fae5, #a7f3d0)',
+                borderRadius: '0.75rem',
+                padding: '1rem',
+                border: '2px solid #10b981'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <Route style={{ width: '18px', height: '18px', color: '#16a34a' }} />
-                  <div>
-                    <p style={{ fontSize: '1rem', fontWeight: '700', color: '#15803d' }}>
+                <div style={{ fontSize: '0.75rem', fontWeight: '700', color: '#065f46', marginBottom: '0.75rem', textAlign: 'center' }}>
+                  OPTIMIZATION IMPACT
+                </div>
+                
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem' }}>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '1.5rem', fontWeight: '700', color: '#047857' }}>
+                      ${(results.summary.costSaving / 1000).toFixed(1)}K
+                    </div>
+                    <div style={{ fontSize: '0.65rem', color: '#065f46', marginTop: '0.125rem' }}>
+                      Cost Saved
+                    </div>
+                  </div>
+                  
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '1.5rem', fontWeight: '700', color: '#047857' }}>
                       {results.summary.distanceSavingKm} km
-                    </p>
-                    <p style={{ fontSize: '0.7rem', color: '#166534' }}>Distance Saved</p>
+                    </div>
+                    <div style={{ fontSize: '0.65rem', color: '#065f46', marginTop: '0.125rem' }}>
+                      Distance
+                    </div>
+                  </div>
+                  
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '1.5rem', fontWeight: '700', color: '#047857' }}>
+                      {results.summary.emissionsSavingKgCO2} kg
+                    </div>
+                    <div style={{ fontSize: '0.65rem', color: '#065f46', marginTop: '0.125rem' }}>
+                      CO₂
+                    </div>
                   </div>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <Leaf style={{ width: '18px', height: '18px', color: '#16a34a' }} />
-                  <div>
-                    <p style={{ fontSize: '1rem', fontWeight: '700', color: '#15803d' }}>
-                      {results.summary.emissionsSavingKgCO2} kg
-                    </p>
-                    <p style={{ fontSize: '0.7rem', color: '#166534' }}>CO₂ Reduced</p>
-                  </div>
+                
+                <div style={{ fontSize: '0.625rem', color: '#059669', marginTop: '0.5rem', textAlign: 'center', fontStyle: 'italic' }}>
+                  vs. individual site visits (unoptimized baseline)
                 </div>
               </div>
             </motion.div>
